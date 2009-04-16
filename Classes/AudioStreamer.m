@@ -5,6 +5,7 @@
 //  Created by Matt Gallagher on 27/09/08.
 //  Copyright 2008 Matt Gallagher. All rights reserved.
 //
+// Modified by Mike Jablonski
 
 #import "AudioStreamer.h"
 #ifdef TARGET_OS_IPHONE			
@@ -345,17 +346,13 @@ void MyAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQu
 	else
 	{
 		myData.isPlaying = true;
-		if (myData->finished)
-		{
-			myData.isPlaying = false;
-		}
 		
 		//
 		// Note about this bug avoidance quirk:
 		//
 		// On cleanup of the AudioQueue thread, on rare occasions, there would
 		// be a crash in CFSetContainsValue as a CFRunLoopObserver was getting
-		// removed from the CFRunLoop.
+		// removed form the CFRunLoop.
 		//
 		// After lots of testing, it appeared that the audio thread was
 		// attempting to remove CFRunLoop observers from the CFRunLoop after the
@@ -403,10 +400,12 @@ void ReadStreamCallBack
 	
 	if (eventType == kCFStreamEventErrorOccurred)
 	{
+		NSLog(@"kCFStreamEventErrorOccurred");
 		myData->failed = YES;
 	}
 	else if (eventType == kCFStreamEventEndEncountered)
 	{
+		NSLog(@"kCFStreamEventEndEncountered");
 		if (myData->failed || myData->finished)
 		{
 			return;
@@ -448,6 +447,7 @@ void ReadStreamCallBack
 	}
 	else if (eventType == kCFStreamEventHasBytesAvailable)
 	{
+		//NSLog(@"kCFStreamEventHasBytesAvailable");
 		if (myData->failed || myData->finished)
 		{
 			return;
@@ -457,7 +457,9 @@ void ReadStreamCallBack
 		// Read the bytes from the stream
 		//
 		UInt8 bytes[kAQBufSize];
+		UInt8 bytesNoMetaData[kAQBufSize];
 		CFIndex length = CFReadStreamRead(stream, bytes, kAQBufSize);
+		int lengthNoMetaData = 0;
 		
 		if (length == -1)
 		{
@@ -470,23 +472,226 @@ void ReadStreamCallBack
 		//
 		if (length > 0)
 		{
+			int streamStart = 0;
+			
+			// Read the HTTP response and get the meta data interval
+			if (myData->metaDataInterval == 0)
+			{
+				CFHTTPMessageRef myResponse = (CFHTTPMessageRef)CFReadStreamCopyProperty(stream, kCFStreamPropertyHTTPResponseHeader);
+				UInt32 statusCode = CFHTTPMessageGetResponseStatusCode(myResponse);
+				
+				//CFStringRef myStatusLine = CFHTTPMessageCopyResponseStatusLine(myResponse);
+				
+				if (statusCode == 200)		// "OK" (this is true even for ICY)
+				{
+					// check if this is a ICY 200 OK response
+					NSString *icyCheck = [[[NSString alloc] initWithBytes:bytes length:10 encoding:NSUTF8StringEncoding] autorelease];
+					if (icyCheck != nil && [icyCheck caseInsensitiveCompare:@"ICY 200 OK"] == NSOrderedSame)	
+					{
+						myData.foundIcyStart = YES;
+						NSLog(@"ICY 200 OK");				
+					}
+					else
+					{
+						// Not an ICY response
+						NSString *metaInt;
+						metaInt = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Icy-Metaint"));	
+						myData->metaDataInterval = [metaInt intValue];
+						[metaInt release];
+						if (metaInt)
+						{
+							NSLog(@"MetaInt: %@", metaInt);
+							myData.parsedHeaders = YES;
+						}
+					}
+				}
+				else if (statusCode == 302)
+				{
+					// Redirect!
+					myData.redirect = YES;
+					NSLog(@"Redirect to another URL.");
+					
+					NSString *escapedValue =
+					[(NSString *)CFURLCreateStringByAddingPercentEscapes(
+																		 nil,
+																		 CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Location")),
+																		 NULL,
+																		 NULL,
+																		 kCFStringEncodingUTF8)
+					 autorelease];
+					
+					myData.url = [NSURL URLWithString:escapedValue];
+					myData->failed = YES;
+				}
+				else
+				{
+					// Invalid
+				}
+			}
+			
+			if (myData.foundIcyStart && !myData.foundIcyEnd)
+			{
+					char c1 = '\0';
+					char c2 = '\0';
+					char c3 = '\0';
+					char c4 = '\0';
+					int lineStart = streamStart;
+					while (YES)
+					{
+						if (streamStart + 3 > length)
+						{
+							break;
+						}
+							
+						c1 = bytes[streamStart];
+						c2 = bytes[streamStart+1];
+						c3 = bytes[streamStart+2];
+						c4 = bytes[streamStart+3];
+						
+						if (c1 == '\r' && c2 == '\n')
+						{		
+							// get the full string
+							NSString *fullString = [[[NSString alloc] initWithBytes:bytes length:streamStart encoding:NSUTF8StringEncoding] autorelease];
+							
+							// get the substring for this line
+							NSString *line = [fullString substringWithRange:NSMakeRange(lineStart, (streamStart-lineStart))];
+							NSLog(@"Header Line: %@.", line);
+							
+							// check if this is icy-metaint
+							NSArray *lineItems = [line componentsSeparatedByString:@":"];
+							if ([lineItems count] > 1)
+							{
+								if ([[lineItems objectAtIndex:0] caseInsensitiveCompare:@"icy-metaint"] == NSOrderedSame)
+								{
+									myData->metaDataInterval = [[lineItems objectAtIndex:1] intValue];
+									NSLog(@"ICY MetaInt: %d", myData->metaDataInterval);
+								}
+							}
+							
+							// this is the end of a line, the new line starts in 2
+							lineStart = streamStart+2; // (c3)
+							
+							if (c3 == '\r' && c4 == '\n')
+							{
+								myData.foundIcyEnd = YES;
+								break;
+							}
+						}
+						
+						streamStart++;
+					} // end while
+					
+					if (myData.foundIcyEnd)
+					{
+						streamStart = streamStart + 4;
+						NSLog(@"Found End.");	
+						myData.parsedHeaders = YES;
+					}
+			}
+				
+			if (myData.parsedHeaders)
+			{
+				// look at each byte
+				for (int i=streamStart; i < length; i++)
+				{
+					// is this a metadata byte?
+					if (myData->metaDataBytesRemaining > 0)
+					{
+						//NSLog(@"meta: %c", bytes[i]);
+						[myData.metaDataString appendFormat:@"%c", bytes[i]];
+					
+						myData->metaDataBytesRemaining -= 1;
+					
+						if (myData->metaDataBytesRemaining == 0)
+						{
+							NSLog(@"MetaData: %@.", myData.metaDataString);
+							[myData updateMetaData:myData.metaDataString];
+						
+							myData->dataBytesRead = 0;
+						}
+						continue;
+					}
+				
+					// is this the interval byte?
+					if (myData->metaDataInterval > 0 && myData->dataBytesRead == myData->metaDataInterval)
+					{
+						myData->metaDataBytesRemaining = bytes[i] * 16;
+						//NSLog(@"Found interval. Meta Length: %d", myData->metaDataBytesRemaining);
+					
+						[myData.metaDataString setString:@""];
+					
+						if (myData->metaDataBytesRemaining == 0)
+						{
+							myData->dataBytesRead = 0;
+						}
+						else
+						{
+							NSLog(@"Found interval. Meta Length: %d", myData->metaDataBytesRemaining);
+						}
+					
+						continue;
+					}
+				
+					// this is a data byte
+					myData->dataBytesRead += 1;
+				
+					// copy the data to the new buffer
+					bytesNoMetaData[lengthNoMetaData] = bytes[i];
+					lengthNoMetaData += 1;
+				} // end for
+			
+				// pthread_mutex_unlock(&myData->mutexMeta);
+			}	// end if parsedHeaders
+			
 			if (myData->discontinuous)
 			{
-				OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, length, bytes, kAudioFileStreamParseFlag_Discontinuity);
-				if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true;}
+				if (lengthNoMetaData > 0)
+				{
+					//NSLog(@"Parsing no meta bytes (Discontinuous).");
+					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, lengthNoMetaData, bytesNoMetaData, kAudioFileStreamParseFlag_Discontinuity);
+					if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true;}
+				}
+				else
+				{
+					//NSLog(@"Parsing normal bytes (Discontinuous).");
+					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, length, bytes, kAudioFileStreamParseFlag_Discontinuity);
+					if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true;}					
+				}
 			}
 			else
 			{
-				OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, length, bytes, 0);
-				if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true; }
-			}
-		}
-	}
+				if (lengthNoMetaData > 0)
+				{
+					//NSLog(@"Parsing no meta bytes.");
+					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, lengthNoMetaData, bytesNoMetaData, 0);
+					if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true; }					
+				}
+				else
+				{
+					//NSLog(@"Parsing normal bytes.");
+					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, length, bytes, 0);
+					if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true; }
+				}
+			} // end discontinuous
+			
+		} // end if length > 0
+		
+	} // end kCFStreamEventHasBytesAvailable
 }
 
 @implementation AudioStreamer
 
+@synthesize url;
 @synthesize isPlaying;
+@synthesize redirect;
+@synthesize foundIcyStart;
+@synthesize foundIcyEnd;
+@synthesize parsedHeaders;
+@synthesize metaDataString;
+@synthesize delegate;
+@synthesize didUpdateMetaDataSelector;
+@synthesize didErrorSelector;
+@synthesize didRedirectSelector;
 
 //
 // initWithURL
@@ -499,6 +704,12 @@ void ReadStreamCallBack
 	if (self != nil)
 	{
 		url = [newUrl retain];
+		metaDataString = [[NSMutableString alloc] initWithString:@""];
+		
+		didUpdateMetaDataSelector = @selector(metaDataUpdated:);
+		didErrorSelector = @selector(streamError:);
+		didRedirectSelector = @selector(streamRedirect:);
+		delegate = nil;
 	}
 	return self;
 }
@@ -511,6 +722,7 @@ void ReadStreamCallBack
 - (void)dealloc
 {
 	[url release];
+	[metaDataString release];
 	[super dealloc];
 }
 
@@ -617,6 +829,9 @@ void ReadStreamCallBack
 	pthread_cond_init(&cond, NULL);
 	pthread_mutex_init(&mutex2, NULL);
 	
+	pthread_mutex_init(&mutexMeta, NULL);
+	dataBytesRead = 0;
+	
 	// create an audio file stream parser
 	OSStatus err = AudioFileStreamOpen(self, MyPropertyListenerProc, MyPacketsProc, 
 							fileTypeHint, &audioFileStream);
@@ -625,13 +840,16 @@ void ReadStreamCallBack
 	//
 	// Create the GET request
 	//
-    CFHTTPMessageRef message= CFHTTPMessageCreateRequest(NULL, (CFStringRef)@"GET", (CFURLRef)url, kCFHTTPVersion1_1);
-    stream = CFReadStreamCreateForHTTPRequest(NULL, message);
-    CFRelease(message);
-    if (!CFReadStreamOpen(stream))
-	{
-        CFRelease(stream);
-		goto cleanup;
+   CFHTTPMessageRef message= CFHTTPMessageCreateRequest(NULL, (CFStringRef)@"GET", (CFURLRef)url, kCFHTTPVersion1_1);
+   CFHTTPMessageSetHeaderFieldValue(message, CFSTR("Icy-MetaData"), CFSTR("1"));
+		// Should put a useragent in here!
+	
+   stream = CFReadStreamCreateForHTTPRequest(NULL, message);
+   CFRelease(message);
+   if (!CFReadStreamOpen(stream))
+		{
+       CFRelease(stream);
+				goto cleanup;
     }
 	
 	//
@@ -659,7 +877,8 @@ void ReadStreamCallBack
 		{
 			[self stop];
 
-#ifdef TARGET_OS_IPHONE			
+#ifdef TARGET_OS_IPHONE
+			/*
 			UIAlertView *alert =
 				[[UIAlertView alloc]
 					initWithTitle:NSLocalizedStringFromTable(@"Audio Error", @"Errors", nil)
@@ -673,6 +892,15 @@ void ReadStreamCallBack
 				withObject:nil
 				waitUntilDone:YES];
 			[alert release];
+			*/
+			if (redirect)
+			{
+				[self redirectStreamError:url];
+			}
+			else
+			{
+				[self audioStreamerError];
+			}
 #else
 			NSAlert *alert =
 				[NSAlert
@@ -718,8 +946,31 @@ cleanup:
 		if (err) { PRINTERROR("AudioQueueDispose"); goto cleanup; }
 	}
 
-	[pool release];
+	[pool release];	
 	[self release];
+}
+
+// Subclasses can override this method to perform handling in the same thread
+// If not overidden, it will call the didUpdateMetaDataSelector on the delegate (by default metaDataUpdated:)`
+- (void)updateMetaData:(NSString *)metaData
+{
+	if (didUpdateMetaDataSelector && [delegate respondsToSelector:didUpdateMetaDataSelector]) {
+		[delegate performSelectorOnMainThread:didUpdateMetaDataSelector withObject:metaData waitUntilDone:YES];		
+	}
+}
+
+- (void)audioStreamerError
+{
+	if (didErrorSelector && [delegate respondsToSelector:didErrorSelector]) {
+		[delegate performSelectorOnMainThread:didErrorSelector withObject:nil waitUntilDone:YES];
+	}
+}
+
+- (void)redirectStreamError:(NSURL*)redirectURL;
+{
+	if (didRedirectSelector && [delegate respondsToSelector:didRedirectSelector]) {
+		[delegate performSelectorOnMainThread:didRedirectSelector withObject:redirectURL waitUntilDone:YES];
+	}
 }
 
 //
@@ -744,12 +995,14 @@ cleanup:
 //
 - (void)stop
 {
+	NSLog(@"AudioStreamer stop.");
 	if (stream)
 	{
 		CFReadStreamClose(stream);
         CFRelease(stream);
 		stream = nil;
 		
+		NSLog(@"AudioStreamer closed stream.");
 		if (finished)
 		{
 			return;
@@ -778,14 +1031,17 @@ cleanup:
 			pthread_mutex_lock(&mutex);
 			pthread_cond_signal(&cond);
 			pthread_mutex_unlock(&mutex);
+			
+			NSLog(@"AudioStreamer stopped queue.");
 		}
 		else
 		{
+			self.isPlaying = true;
+			self.isPlaying = false;
 			finished = true;
-			self.isPlaying = YES;
-			self.isPlaying = NO;
 		}
 	}
 }
 
 @end
+
