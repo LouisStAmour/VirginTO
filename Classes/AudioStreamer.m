@@ -645,13 +645,19 @@ void ReadStreamCallBack
 			
 			if (myData->discontinuous)
 			{
+				/*
+				 * SHOUTcast can send the interval byte by itself. In that case lengthNoMetaData is 0, but
+				 * the interval byte should not be sent to the audio queue. The check for a metaDataInterval == 0
+				 * will make sure that we don't ever send in the interval byte on a stream with metadata
+				 */
+				
 				if (lengthNoMetaData > 0)
 				{
 					//NSLog(@"Parsing no meta bytes (Discontinuous).");
 					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, lengthNoMetaData, bytesNoMetaData, kAudioFileStreamParseFlag_Discontinuity);
 					if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true;}
 				}
-				else
+				else if (myData->metaDataInterval == 0)	// make sure this isn't a stream with metadata
 				{
 					//NSLog(@"Parsing normal bytes (Discontinuous).");
 					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, length, bytes, kAudioFileStreamParseFlag_Discontinuity);
@@ -666,7 +672,7 @@ void ReadStreamCallBack
 					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, lengthNoMetaData, bytesNoMetaData, 0);
 					if (err) { PRINTERROR("AudioFileStreamParseBytes"); myData->failed = true; }					
 				}
-				else
+				else if (myData->metaDataInterval == 0)	// make sure this isn't a stream with metadata
 				{
 					//NSLog(@"Parsing normal bytes.");
 					OSStatus err = AudioFileStreamParseBytes(myData->audioFileStream, length, bytes, 0);
