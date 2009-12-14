@@ -11,6 +11,31 @@
 #import <QuartzCore/CoreAnimation.h>
 
 @implementation iPhoneStreamingPlayerViewController
+@synthesize metadata;
+@synthesize metadata2;
+@synthesize bitrate;
+
+#pragma mark -
+#pragma mark AudioStream Callback Functions
+- (void)bitrateUpdated:(NSNumber *)br 
+{
+	bitrate.text = [br stringValue];
+}
+
+- (void)metaDataUpdated:(NSString *)metaData 
+{
+	NSArray *listItems = [metaData componentsSeparatedByString:@";"];
+	
+	if ([listItems count] > 0)
+		metadata.text = [listItems objectAtIndex:0];
+	if ([listItems count] > 1)
+		metadata2.text = [listItems objectAtIndex:1];
+}
+
+- (void)streamError  
+{
+	NSLog(@"Stream Error.");
+}
 
 - (void)setButtonImage:(UIImage *)image
 {
@@ -80,6 +105,12 @@
 			forKeyPath:@"isPlaying"
 			options:0
 			context:nil];
+		
+		[streamer setDelegate:self];
+		[streamer setDidUpdateMetaDataSelector:@selector(metaDataUpdated:)];
+		[streamer setDidErrorSelector:@selector(streamError)];
+		[streamer setDidDetectBitrateSelector:@selector(bitrateUpdated:)];
+		
 		[streamer start];
 
 		[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
