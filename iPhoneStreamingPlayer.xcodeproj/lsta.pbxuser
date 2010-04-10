@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	056A6441116FE74200A168B0 /* Virgin TO */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Virgin TO";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	056A644D116FE74C00A168B0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	056A644E116FE74C00A168B0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	056A6467116FF54A00A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
+		name = "AudioStreamer.h: 102";
+		rLen = 0;
+		rLoc = 3486;
+		rType = 0;
+		vrLen = 1455;
+		vrLoc = 1361;
+	};
+	056A6468116FF54A00A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 45";
+		rLen = 0;
+		rLoc = 1379;
+		rType = 0;
+		vrLen = 1060;
+		vrLoc = 1282;
+	};
+	056A6469116FF54A00A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 1150";
+		rLen = 0;
+		rLoc = 35314;
+		rType = 0;
+		vrLen = 800;
+		vrLoc = 34171;
+	};
+	056A6476116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.h */;
+		name = "iPhoneStreamingPlayerAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 563;
+		vrLoc = 0;
+	};
+	056A6477116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.m */;
+		name = "iPhoneStreamingPlayerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 42;
+	};
+	056A6478116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
+		name = "AudioStreamer.h: 102";
+		rLen = 0;
+		rLoc = 3486;
+		rType = 0;
+		vrLen = 955;
+		vrLoc = 2759;
+	};
+	056A6479116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 44";
+		rLen = 0;
+		rLoc = 1379;
+		rType = 0;
+		vrLen = 1094;
+		vrLoc = 1436;
+	};
+	056A647A116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
+		name = "iPhoneStreamingPlayerViewController.h: 24";
+		rLen = 0;
+		rLoc = 486;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 176;
+	};
+	056A647B116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
+		name = "iPhoneStreamingPlayerViewController.m: 17";
+		rLen = 0;
+		rLoc = 407;
+		rType = 0;
+		vrLen = 796;
+		vrLoc = 0;
+	};
+	056A647C116FF8A200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
+		name = "iPhoneStreamingPlayerViewController.m: 51";
+		rLen = 0;
+		rLoc = 1377;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 660;
+	};
+	056A647F116FF8AC00A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 1150";
+		rLen = 0;
+		rLoc = 35314;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 34418;
+	};
+	056A6482116FF8C300A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 1150";
+		rLen = 0;
+		rLoc = 35314;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 34418;
+	};
+	056A6485116FFA7F00A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
+		name = "iPhoneStreamingPlayerViewController.m: 51";
+		rLen = 0;
+		rLoc = 1377;
+		rType = 0;
+		vrLen = 731;
+		vrLoc = 662;
+	};
+	056A6486116FFA7F00A168B0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	056A6487116FFA7F00A168B0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIBackgroundMode,
+		);
+		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
+		rLen = 0;
+		rLoc = 0;
+	};
+	056A6496116FFCC500A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 1150";
+		rLen = 0;
+		rLoc = 35314;
+		rType = 0;
+		vrLen = 775;
+		vrLoc = 34489;
+	};
+	056A653811702DFB00A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 1150";
+		rLen = 0;
+		rLoc = 35314;
+		rType = 0;
+		vrLen = 737;
+		vrLoc = 34583;
+	};
+	056A655311702E6200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.m */;
+		name = "iPhoneStreamingPlayerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 617;
+		vrLoc = 71;
+	};
+	056A655411702E6200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
+		name = "iPhoneStreamingPlayerViewController.m: 36";
+		rLen = 0;
+		rLoc = 909;
+		rType = 0;
+		vrLen = 739;
+		vrLoc = 0;
+	};
+	056A655511702E6200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
+		name = "iPhoneStreamingPlayerViewController.h: 24";
+		rLen = 0;
+		rLoc = 486;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 0;
+	};
+	056A655611702E6200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.h */;
+		name = "iPhoneStreamingPlayerAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 563;
+		vrLoc = 0;
+	};
+	056A655711702E6200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
+		name = "AudioStreamer.h: 102";
+		rLen = 33;
+		rLoc = 3452;
+		rType = 0;
+		vrLen = 985;
+		vrLoc = 2911;
+	};
+	056A655811702E6200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 1134";
+		rLen = 0;
+		rLoc = 34933;
+		rType = 0;
+		vrLen = 821;
+		vrLoc = 33893;
+	};
+	056A655911702E6200A168B0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIBackgroundModes,
+			0,
+		);
+		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	056A655A11702E6200A168B0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	056A657011702F8200A168B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m.old: 1150";
+		rLen = 0;
+		rLoc = 35314;
+		rType = 0;
+		vrLen = 637;
+		vrLoc = 34771;
+	};
+	1D3623240D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {688, 387}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 563}";
+			sepNavWindowFrame = "{{38, 65}, {977, 967}}";
+		};
+	};
+	1D3623250D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {688, 442}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{71, 617}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* Virgin TO */ = {
+		activeExec = 0;
+		executables = (
+			056A6441116FE74200A168B0 /* Virgin TO */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {688, 507}}";
+			sepNavSelRange = "{486, 0}";
+			sepNavVisRange = "{0, 671}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 2470}}";
+			sepNavSelRange = "{3388, 33}";
+			sepNavVisRange = "{3144, 667}";
+			sepNavWindowFrame = "{{61, 44}, {977, 967}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 056A6441116FE74200A168B0 /* Virgin TO */;
+		activeSDKPreference = iphoneos4.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Virgin TO */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Virgin TO */,
+		);
+		codeSenseManager = 056A644E116FE74C00A168B0 /* Code sense */;
+		executables = (
+			056A6441116FE74200A168B0 /* Virgin TO */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					510,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					470,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 292546370;
+			PBXWorkspaceStateSaveDate = 292546370;
+		};
+		perUserProjectItems = {
+			056A6467116FF54A00A168B0 /* PBXTextBookmark */ = 056A6467116FF54A00A168B0 /* PBXTextBookmark */;
+			056A6468116FF54A00A168B0 /* PBXTextBookmark */ = 056A6468116FF54A00A168B0 /* PBXTextBookmark */;
+			056A6469116FF54A00A168B0 /* PBXTextBookmark */ = 056A6469116FF54A00A168B0 /* PBXTextBookmark */;
+			056A6476116FF8A200A168B0 /* PBXTextBookmark */ = 056A6476116FF8A200A168B0 /* PBXTextBookmark */;
+			056A6477116FF8A200A168B0 /* PBXTextBookmark */ = 056A6477116FF8A200A168B0 /* PBXTextBookmark */;
+			056A6478116FF8A200A168B0 /* PBXTextBookmark */ = 056A6478116FF8A200A168B0 /* PBXTextBookmark */;
+			056A6479116FF8A200A168B0 /* PBXTextBookmark */ = 056A6479116FF8A200A168B0 /* PBXTextBookmark */;
+			056A647A116FF8A200A168B0 /* PBXTextBookmark */ = 056A647A116FF8A200A168B0 /* PBXTextBookmark */;
+			056A647B116FF8A200A168B0 /* PBXTextBookmark */ = 056A647B116FF8A200A168B0 /* PBXTextBookmark */;
+			056A647C116FF8A200A168B0 /* PBXTextBookmark */ = 056A647C116FF8A200A168B0 /* PBXTextBookmark */;
+			056A647F116FF8AC00A168B0 /* PBXTextBookmark */ = 056A647F116FF8AC00A168B0 /* PBXTextBookmark */;
+			056A6482116FF8C300A168B0 /* PBXTextBookmark */ = 056A6482116FF8C300A168B0 /* PBXTextBookmark */;
+			056A6485116FFA7F00A168B0 /* PBXTextBookmark */ = 056A6485116FFA7F00A168B0 /* PBXTextBookmark */;
+			056A6486116FFA7F00A168B0 /* PlistBookmark */ = 056A6486116FFA7F00A168B0 /* PlistBookmark */;
+			056A6487116FFA7F00A168B0 /* PlistBookmark */ = 056A6487116FFA7F00A168B0 /* PlistBookmark */;
+			056A6496116FFCC500A168B0 /* PBXTextBookmark */ = 056A6496116FFCC500A168B0 /* PBXTextBookmark */;
+			056A653811702DFB00A168B0 /* PBXTextBookmark */ = 056A653811702DFB00A168B0 /* PBXTextBookmark */;
+			056A655311702E6200A168B0 /* PBXTextBookmark */ = 056A655311702E6200A168B0 /* PBXTextBookmark */;
+			056A655411702E6200A168B0 /* PBXTextBookmark */ = 056A655411702E6200A168B0 /* PBXTextBookmark */;
+			056A655511702E6200A168B0 /* PBXTextBookmark */ = 056A655511702E6200A168B0 /* PBXTextBookmark */;
+			056A655611702E6200A168B0 /* PBXTextBookmark */ = 056A655611702E6200A168B0 /* PBXTextBookmark */;
+			056A655711702E6200A168B0 /* PBXTextBookmark */ = 056A655711702E6200A168B0 /* PBXTextBookmark */;
+			056A655811702E6200A168B0 /* PBXTextBookmark */ = 056A655811702E6200A168B0 /* PBXTextBookmark */;
+			056A655911702E6200A168B0 /* PlistBookmark */ = 056A655911702E6200A168B0 /* PlistBookmark */;
+			056A655A11702E6200A168B0 /* PlistBookmark */ = 056A655A11702E6200A168B0 /* PlistBookmark */;
+			056A657011702F8200A168B0 /* PBXTextBookmark */ = 056A657011702F8200A168B0 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 056A644D116FE74C00A168B0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{61, 44}, {977, 967}}";
+		};
+	};
+	C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {907, 16380}}";
+			sepNavSelRange = "{34933, 0}";
+			sepNavVisRange = "{34085, 771}";
+			sepNavWindowFrame = "{{84, 23}, {977, 967}}";
+		};
+	};
+	C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {784, 1456}}";
+			sepNavSelRange = "{3452, 33}";
+			sepNavVisRange = "{2941, 960}";
+		};
+	};
+}

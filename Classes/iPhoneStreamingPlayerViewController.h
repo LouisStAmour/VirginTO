@@ -14,11 +14,14 @@
 {
 	IBOutlet UITextField *textField;
 	IBOutlet UIButton *button;
+	IBOutlet UIButton *muteButton;
 	AudioStreamer *streamer;
 	
 	UILabel *metadata;
 	UILabel *metadata2;
 	UILabel *bitrate;
+	
+	Boolean muted;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *metadata;
@@ -26,6 +29,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *bitrate;
 
 - (IBAction)buttonPressed:(id)sender;
+- (IBAction)muteButtonPressed:(id)sender;
 
 - (void)bitrateUpdated:(NSNumber *)br;
 - (void)metaDataUpdated:(NSString *)metaData;

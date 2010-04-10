@@ -16,8 +16,8 @@
 #include <pthread.h>
 #include <AudioToolbox/AudioToolbox.h>
 
-#define kNumAQBufs 6							// number of audio queue buffers we allocate
-#define kAQBufSize  3 * 32 * 1024		// number of bytes in each audio queue buffer
+#define kNumAQBufs 12							// number of audio queue buffers we allocate
+#define kAQBufSize  1 * 48 * 2048		// number of bytes in each audio queue buffer
 // 3x for Live365? 1x for everything else?
 #define kAQMaxPacketDescs 512		// number of packet descriptions in our array
 
@@ -99,6 +99,7 @@
 - (void)stop;
 - (void)resetAudioQueue;
 - (void)restartAudioQueue;
+- (void)setVolume:(Float32)volume;
 
 // Called when the metadata is updated - defaults to: @selector(metaDataUpdated:)
 - (void)updateMetaData:(NSString *)metaData;

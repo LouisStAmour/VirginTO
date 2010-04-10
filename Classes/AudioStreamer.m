@@ -61,6 +61,7 @@ void MyPropertyListenerProc(	void *							inClientData,
 {	
 	// this is called by audio file stream when it finds property values
 	AudioStreamer* myData = (AudioStreamer*)inClientData;
+	
 	OSStatus err = noErr;
 
 	switch (inPropertyID) {
@@ -1135,6 +1136,19 @@ cleanup:
 	for (int i = 0; i < kNumAQBufs; ++i) {
         AudioQueueFreeBuffer(audioQueue, audioQueueBuffer[i]);
 	}
+}
+
+- (void)setVolume:(Float32)volume
+{
+	pthread_mutex_lock(&mutex2);
+	// Stop the Audio Queue
+	OSStatus err = AudioQueueSetParameter (
+		audioQueue,
+		kAudioQueueParam_Volume,
+		volume
+	);
+	if (err) { PRINTERROR("AudioQueueSetParameter"); }
+	pthread_mutex_unlock(&mutex2);
 }
 
 - (void)restartAudioQueue

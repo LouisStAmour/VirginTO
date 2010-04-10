@@ -26,10 +26,30 @@
 {
 	NSArray *listItems = [metaData componentsSeparatedByString:@";"];
 	
-	if ([listItems count] > 0)
+	if ([listItems count] > 0) {
 		metadata.text = [listItems objectAtIndex:0];
+		//NSLog(@"%@", metadata.text);
+	}
 	if ([listItems count] > 1)
 		metadata2.text = [listItems objectAtIndex:1];
+	
+	if (muted && ![metadata.text hasPrefix:@"StreamTitle='<?xml version=\"1.0\" encoding=\"UTF-8\" ?><nowplaying><artist><id></id>"]) {
+		muted = NO;
+		[streamer setVolume:1.0];
+		[muteButton setTitle:@"Mute Radio Until Next Song ;-)" forState:UIControlStateNormal];
+	}
+}
+
+- (IBAction)muteButtonPressed:(id)sender {
+	if (muted) {
+		muted = NO;
+		[streamer setVolume:1.0];
+		[muteButton setTitle:@"Mute Radio Until Next Song ;-)" forState:UIControlStateNormal];
+	} else {
+		muted = YES;
+		[streamer setVolume:0.0];
+		[muteButton setTitle:@"Muted Until Next Song. Unmute?" forState:UIControlStateNormal];
+	}
 }
 
 - (void)streamError  
@@ -49,6 +69,7 @@
 {
 	UIImage *image = [UIImage imageNamed:@"playbutton.png"];
 	[self setButtonImage:image];
+	muted = NO;
 }
 
 - (void)spinButton
@@ -106,10 +127,10 @@
 			options:0
 			context:nil];
 		
-		[streamer setDelegate:self];
-		[streamer setDidUpdateMetaDataSelector:@selector(metaDataUpdated:)];
-		[streamer setDidErrorSelector:@selector(streamError)];
-		[streamer setDidDetectBitrateSelector:@selector(bitrateUpdated:)];
+//		[streamer setDelegate:self];
+//		[streamer setDidUpdateMetaDataSelector:@selector(metaDataUpdated:)];
+//		[streamer setDidErrorSelector:@selector(streamError)];
+//		[streamer setDidDetectBitrateSelector:@selector(bitrateUpdated:)];
 		
 		[streamer start];
 
@@ -138,6 +159,7 @@
 				onThread:[NSThread mainThread]
 				withObject:[UIImage imageNamed:@"stopbutton.png"]
 				waitUntilDone:NO];
+			[(AudioStreamer *)object setVolume:1.0];
 		}
 		else
 		{
