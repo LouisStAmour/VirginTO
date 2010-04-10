@@ -11,7 +11,7 @@
 #import <QuartzCore/CoreAnimation.h>
 
 @implementation iPhoneStreamingPlayerViewController
-@synthesize metadata;
+@synthesize metadata, muteTimer;
 //@synthesize metadata2;
 //@synthesize bitrate;
 
@@ -35,17 +35,18 @@
 		} else {
 			NSScanner *theScanner = [NSScanner scannerWithString:[listItems objectAtIndex:0]];
 			NSString *artist, *album, *track;
-			[theScanner scanUpToString:@"<name><![CDATA[" intoString:NULL];
+			[theScanner scanUpToString:@"<name><![CDATA[" intoString:nil];
 			[theScanner scanUpToString:@"]]></name>" intoString:&artist];
-			[theScanner scanUpToString:@"<name><![CDATA[" intoString:NULL];
+			[theScanner scanUpToString:@"<name><![CDATA[" intoString:nil];
 			[theScanner scanUpToString:@"]]></name>" intoString:&album];
-			[theScanner scanUpToString:@"<name><![CDATA[" intoString:NULL];
+			[theScanner scanUpToString:@"<name><![CDATA[" intoString:nil];
 			[theScanner scanUpToString:@"]]></name>" intoString:&track];
 			metadata.text = [NSString stringWithFormat:@"Track: %@\nArtist: %@\nAlbum: %@", track, artist, album];
 			if (muted) {
-				muted = NO;
-				[streamer setVolume:1.0];
-				[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
+				[self unmute];
+				if (muteTimer && [muteTimer isValid]) {
+					[muteTimer invalidate];
+				}
 			}
 		}
 	}
@@ -54,15 +55,48 @@
 	//}
 }
 
+- (void)unmute {
+	muted = NO;
+	[streamer setVolume:1.0];
+	[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
+	[muteButton30s setTitle:@"Mute 30 sec" forState:UIControlStateNormal];
+}
+
+- (void)muteFor:(int)seconds {
+	muted = YES;
+	[streamer setVolume:0.0];
+	muteTimer = [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(unmute) userInfo:nil repeats:NO];
+}
+
 - (IBAction)muteButtonPressed:(id)sender {
-	if (muted) {
-		muted = NO;
-		[streamer setVolume:1.0];
-		[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
-	} else {
-		muted = YES;
-		[streamer setVolume:0.0];
+	if (muteTimer && [muteTimer isValid] && [muteTimer timeInterval] == 30) {
+		[muteTimer invalidate];
+		[self muteFor:180];
+		[muteButton30s setTitle:@"Mute 30 sec" forState:UIControlStateNormal];
 		[muteButton setTitle:@"Unmute?" forState:UIControlStateNormal];
+	} else {
+		if (muted) {
+			[self unmute];
+		} else {
+			[self muteFor:180];
+			[muteButton setTitle:@"Unmute?" forState:UIControlStateNormal];
+		}
+	}
+}
+
+- (IBAction)mute30sButtonPressed:(id)sender {
+	if (muteTimer && [muteTimer isValid] && [muteTimer timeInterval] == 180) {
+		[muteTimer invalidate];
+		[self muteFor:30];
+		[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
+		[muteButton30s setTitle:@"Unmute?" forState:UIControlStateNormal];
+	} else {
+		if (muted) {
+			[self unmute];
+		} else {
+			[self muteFor:30];
+			[muteButton30s setTitle:@"Unmute?" forState:UIControlStateNormal];
+		}
 	}
 }
 

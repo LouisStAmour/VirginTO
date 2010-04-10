@@ -557,13 +557,10 @@ void ReadStreamCallBack
 					else
 					{
 						// Not an ICY response
-						NSString *metaInt;
-						NSString *contentType;
-						NSString *icyBr;
-						metaInt = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Icy-Metaint"));
-						contentType = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Content-Type"));
-						icyBr = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("icy-br"));
-						
+						NSString *metaInt = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Icy-Metaint"));
+						NSString *contentType = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Content-Type"));
+						NSString *icyBr = (NSString *) CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("icy-br"));
+					
 						if (contentType) 
 						{
 							// only if we haven't already set a content-type
@@ -592,6 +589,9 @@ void ReadStreamCallBack
 							NSLog(@"MetaInt: %@", metaInt);
 							myData.parsedHeaders = YES;
 						}
+						[metaInt release];
+						[contentType release];
+						[icyBr release];
 					}
 				}
 				else if (statusCode == 301 || statusCode == 302 || statusCode == 303 || statusCode == 307)
@@ -600,15 +600,16 @@ void ReadStreamCallBack
 					myData.redirect = YES;
 					NSLog(@"Redirect to another URL.");
 					
+					CFStringRef location = CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Location"));
 					NSString *escapedValue =
 					[(NSString *)CFURLCreateStringByAddingPercentEscapes(
 																		 nil,
-																		 CFHTTPMessageCopyHeaderFieldValue(myResponse, CFSTR("Location")),
+																		 location,
 																		 NULL,
 																		 NULL,
 																		 kCFStringEncodingUTF8)
 					 autorelease];
-					
+					CFRelease(location);
 					myData.url = [NSURL URLWithString:escapedValue];
 					// alert interested parties
 					[myData redirectStreamError:myData.url];
@@ -618,6 +619,7 @@ void ReadStreamCallBack
 				{
 					// Invalid
 				}
+				CFRelease(myResponse);
 			}
 			
 			if (myData.foundIcyStart && !myData.foundIcyEnd)
