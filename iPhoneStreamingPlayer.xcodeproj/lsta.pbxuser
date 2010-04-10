@@ -207,7 +207,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 101";
 		rLen = 0;
-		rLoc = 3484;
+		rLoc = 3487;
 		rType = 0;
 		vrLen = 1001;
 		vrLoc = 0;
@@ -277,7 +277,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1247;
 		vrLoc = 2643;
@@ -287,7 +287,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 484;
+		rLoc = 487;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 0;
@@ -297,7 +297,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 3;
@@ -317,7 +317,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 3;
@@ -327,7 +327,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 23;
@@ -337,7 +337,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1062;
 		vrLoc = 51;
@@ -347,7 +347,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 150;
@@ -357,7 +357,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 484;
+		rLoc = 487;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 150;
@@ -367,7 +367,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 22";
 		rLen = 3;
-		rLoc = 610;
+		rLoc = 613;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 223;
@@ -377,7 +377,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 22";
 		rLen = 3;
-		rLoc = 610;
+		rLoc = 613;
 		rType = 0;
 		vrLen = 1011;
 		vrLoc = 224;
@@ -387,7 +387,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1043;
 		vrLoc = 275;
@@ -397,7 +397,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 305;
@@ -407,7 +407,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 484;
+		rLoc = 487;
 		rType = 0;
 		vrLen = 1124;
 		vrLoc = 333;
@@ -417,7 +417,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1181;
 		vrLoc = 354;
@@ -427,7 +427,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 22";
 		rLen = 0;
-		rLoc = 613;
+		rLoc = 616;
 		rType = 0;
 		vrLen = 1251;
 		vrLoc = 394;
@@ -437,7 +437,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 333;
@@ -447,7 +447,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 484;
+		rLoc = 487;
 		rType = 0;
 		vrLen = 1138;
 		vrLoc = 393;
@@ -457,7 +457,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 19";
 		rLen = 0;
-		rLoc = 415;
+		rLoc = 414;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 394;
@@ -467,7 +467,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 19";
 		rLen = 0;
-		rLoc = 415;
+		rLoc = 414;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 153;
@@ -521,7 +521,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 102";
 		rLen = 0;
-		rLoc = 3519;
+		rLoc = 3522;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 1361;
@@ -571,7 +571,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 102";
 		rLen = 0;
-		rLoc = 3519;
+		rLoc = 3522;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 2759;
@@ -734,7 +734,7 @@
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 102";
 		rLen = 33;
-		rLoc = 3485;
+		rLoc = 3488;
 		rType = 0;
 		vrLen = 985;
 		vrLoc = 2911;
