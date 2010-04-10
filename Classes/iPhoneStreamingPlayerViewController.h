@@ -18,15 +18,15 @@
 	AudioStreamer *streamer;
 	
 	UILabel *metadata;
-	UILabel *metadata2;
-	UILabel *bitrate;
+	//UILabel *metadata2;
+	//UILabel *bitrate;
 	
 	Boolean muted;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *metadata;
-@property (nonatomic, retain) IBOutlet UILabel *metadata2;
-@property (nonatomic, retain) IBOutlet UILabel *bitrate;
+//@property (nonatomic, retain) IBOutlet UILabel *metadata2;
+//@property (nonatomic, retain) IBOutlet UILabel *bitrate;
 
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)muteButtonPressed:(id)sender;

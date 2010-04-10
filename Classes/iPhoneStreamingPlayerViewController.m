@@ -12,14 +12,14 @@
 
 @implementation iPhoneStreamingPlayerViewController
 @synthesize metadata;
-@synthesize metadata2;
-@synthesize bitrate;
+//@synthesize metadata2;
+//@synthesize bitrate;
 
 #pragma mark -
 #pragma mark AudioStream Callback Functions
 - (void)bitrateUpdated:(NSNumber *)br 
 {
-	bitrate.text = [br stringValue];
+	//bitrate.text = [br stringValue];
 }
 
 - (void)metaDataUpdated:(NSString *)metaData 
@@ -27,34 +27,48 @@
 	NSArray *listItems = [metaData componentsSeparatedByString:@";"];
 	
 	if ([listItems count] > 0) {
-		metadata.text = [listItems objectAtIndex:0];
-		//NSLog(@"%@", metadata.text);
+		//metadata.text = [listItems objectAtIndex:0];
+		//NSLog(@"%@", metaData);
+		
+		if ([[listItems objectAtIndex:0] hasPrefix:@"StreamTitle='<?xml version=\"1.0\" encoding=\"UTF-8\" ?><nowplaying><artist><id></id>"]) {
+			metadata.text = @"Ad or Live Content";
+		} else {
+			NSScanner *theScanner = [NSScanner scannerWithString:[listItems objectAtIndex:0]];
+			NSString *artist, *album, *track;
+			[theScanner scanUpToString:@"<name><![CDATA[" intoString:NULL];
+			[theScanner scanUpToString:@"]]></name>" intoString:&artist];
+			[theScanner scanUpToString:@"<name><![CDATA[" intoString:NULL];
+			[theScanner scanUpToString:@"]]></name>" intoString:&album];
+			[theScanner scanUpToString:@"<name><![CDATA[" intoString:NULL];
+			[theScanner scanUpToString:@"]]></name>" intoString:&track];
+			metadata.text = [NSString stringWithFormat:@"Track: %@\nArtist: %@\nAlbum: %@", track, artist, album];
+			if (muted) {
+				muted = NO;
+				[streamer setVolume:1.0];
+				[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
+			}
+		}
 	}
-	if ([listItems count] > 1)
-		metadata2.text = [listItems objectAtIndex:1];
-	
-	if (muted && ![metadata.text hasPrefix:@"StreamTitle='<?xml version=\"1.0\" encoding=\"UTF-8\" ?><nowplaying><artist><id></id>"]) {
-		muted = NO;
-		[streamer setVolume:1.0];
-		[muteButton setTitle:@"Mute Radio Until Next Song ;-)" forState:UIControlStateNormal];
-	}
+	//if ([listItems count] > 1) {
+	//	metadata2.text = [listItems objectAtIndex:1];
+	//}
 }
 
 - (IBAction)muteButtonPressed:(id)sender {
 	if (muted) {
 		muted = NO;
 		[streamer setVolume:1.0];
-		[muteButton setTitle:@"Mute Radio Until Next Song ;-)" forState:UIControlStateNormal];
+		[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
 	} else {
 		muted = YES;
 		[streamer setVolume:0.0];
-		[muteButton setTitle:@"Muted Until Next Song. Unmute?" forState:UIControlStateNormal];
+		[muteButton setTitle:@"Unmute?" forState:UIControlStateNormal];
 	}
 }
 
 - (void)streamError  
 {
-	NSLog(@"Stream Error.");
+	metadata.text = @"Stream Error.";
 }
 
 - (void)setButtonImage:(UIImage *)image
@@ -127,10 +141,10 @@
 			options:0
 			context:nil];
 		
-//		[streamer setDelegate:self];
-//		[streamer setDidUpdateMetaDataSelector:@selector(metaDataUpdated:)];
-//		[streamer setDidErrorSelector:@selector(streamError)];
-//		[streamer setDidDetectBitrateSelector:@selector(bitrateUpdated:)];
+		[streamer setDelegate:self];
+		[streamer setDidUpdateMetaDataSelector:@selector(metaDataUpdated:)];
+		[streamer setDidErrorSelector:@selector(streamError)];
+		[streamer setDidDetectBitrateSelector:@selector(bitrateUpdated:)];
 		
 		[streamer start];
 
