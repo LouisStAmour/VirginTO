@@ -5,7 +5,7 @@
 //  Created by Matt Gallagher on 27/09/08.
 //  Copyright 2008 Matt Gallagher. All rights reserved.
 //
-// Modified by Mike Jablonski
+// Modified by Mike Jablonski (2009) & Louis St-Amour (lsta.me, 2010)
 
 #import "AudioStreamer.h"
 
@@ -969,9 +969,11 @@ void ReadStreamCallBack
 	//
    CFHTTPMessageRef message= CFHTTPMessageCreateRequest(NULL, (CFStringRef)@"GET", (CFURLRef)url, kCFHTTPVersion1_1);
    CFHTTPMessageSetHeaderFieldValue(message, CFSTR("Icy-MetaData"), CFSTR("1"));
+	
    //CFHTTPMessageSetHeaderFieldValue(message, CFSTR("User-Agent"), (CFStringRef)kUserAgent);
 	
    stream = CFReadStreamCreateForHTTPRequest(NULL, message);
+	CFReadStreamSetProperty(stream, kCFStreamPropertyHTTPAttemptPersistentConnection, kCFBooleanTrue);
    CFRelease(message);
    if (!CFReadStreamOpen(stream))
 	{

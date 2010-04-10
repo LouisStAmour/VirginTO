@@ -30,22 +30,28 @@
 		//metadata.text = [listItems objectAtIndex:0];
 		//NSLog(@"%@", metaData);
 		
-		if ([[listItems objectAtIndex:0] hasPrefix:@"StreamTitle='<?xml version=\"1.0\" encoding=\"UTF-8\" ?><nowplaying><artist><id></id>"]) {
-			metadata.text = @"Ad or Live Content";
-		} else {
+		//if ([[listItems objectAtIndex:0] hasPrefix:@"StreamTitle='<?xml version=\"1.0\" encoding=\"UTF-8\" ?><nowplaying><artist><id></id>"]) {
+		//	metadata.text = @"Ad or Live Content";
+		//} else {
 			NSScanner *theScanner = [NSScanner scannerWithString:[listItems objectAtIndex:0]];
 			NSString *artist, *album, *track;
-			[theScanner scanUpToString:@"<name><![CDATA[" intoString:nil];
-			[theScanner scanUpToString:@"]]></name>" intoString:&artist];
-			[theScanner scanUpToString:@"<name><![CDATA[" intoString:nil];
-			[theScanner scanUpToString:@"]]></name>" intoString:&album];
-			[theScanner scanUpToString:@"<name><![CDATA[" intoString:nil];
-			[theScanner scanUpToString:@"]]></name>" intoString:&track];
-			metadata.text = [NSString stringWithFormat:@"Track: %@\nArtist: %@\nAlbum: %@", track, artist, album];
+			[theScanner scanUpToString:@"<name>" intoString:nil];
+			[theScanner scanString:@"<name>" intoString:nil];
+			[theScanner scanUpToString:@"</name>" intoString:&artist];
+			[theScanner scanUpToString:@"<name>" intoString:nil];
+			[theScanner scanString:@"<name>" intoString:nil];
+			[theScanner scanUpToString:@"</name>" intoString:&album];
+			[theScanner scanUpToString:@"<name>" intoString:nil];
+			[theScanner scanString:@"<name>" intoString:nil];
+			[theScanner scanUpToString:@"</name>" intoString:&track];
+			metadata.text = [[[[NSString stringWithFormat:@"Track: %@\nArtist: %@\nAlbum: %@", track, artist, album] 
+											 stringByReplacingOccurrencesOfString:@"<![CDATA[" withString:@""]
+											 stringByReplacingOccurrencesOfString:@"]]>" withString:@""]
+											 stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
 			if (muted) {
 				[self unmute];
 			}
-		}
+		//}
 	}
 	//if ([listItems count] > 1) {
 	//	metadata2.text = [listItems objectAtIndex:1];

@@ -5,7 +5,7 @@
 //  Created by Matt Gallagher on 27/09/08.
 //  Copyright 2008 Matt Gallagher. All rights reserved.
 //
-// Modified by Mike Jablonski
+// Modified by Mike Jablonski (2009) & Louis St-Amour (lsta.me, 2010)
 
 #ifdef TARGET_OS_IPHONE			
 #import <UIKit/UIKit.h>
@@ -16,10 +16,10 @@
 #include <pthread.h>
 #include <AudioToolbox/AudioToolbox.h>
 
-#define kNumAQBufs 24							// number of audio queue buffers we allocate
+#define kNumAQBufs 512					// number of audio queue buffers we allocate
 #define kAQBufSize  1 * 48 * 2048		// number of bytes in each audio queue buffer
 // 3x for Live365? 1x for everything else?
-#define kAQMaxPacketDescs 512		// number of packet descriptions in our array
+#define kAQMaxPacketDescs 4096		// number of packet descriptions in our array
 
 @interface AudioStreamer : NSObject
 {
