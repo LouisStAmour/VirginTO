@@ -44,9 +44,6 @@
 			metadata.text = [NSString stringWithFormat:@"Track: %@\nArtist: %@\nAlbum: %@", track, artist, album];
 			if (muted) {
 				[self unmute];
-				if (muteTimer && [muteTimer isValid]) {
-					[muteTimer invalidate];
-				}
 			}
 		}
 	}
@@ -60,6 +57,10 @@
 	[streamer setVolume:1.0];
 	[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
 	[muteButton30s setTitle:@"Mute 30 sec" forState:UIControlStateNormal];
+	if (muteTimer != nil) {
+		[muteTimer invalidate];
+		muteTimer = nil;
+	}
 }
 
 - (void)muteFor:(int)seconds {
@@ -69,7 +70,7 @@
 }
 
 - (IBAction)muteButtonPressed:(id)sender {
-	if (muteTimer && [muteTimer isValid] && [muteTimer timeInterval] == 30) {
+	if (muteTimer != nil && [muteTimer isValid] && [muteTimer timeInterval] == 30) {
 		[muteTimer invalidate];
 		[self muteFor:180];
 		[muteButton30s setTitle:@"Mute 30 sec" forState:UIControlStateNormal];
@@ -85,7 +86,7 @@
 }
 
 - (IBAction)mute30sButtonPressed:(id)sender {
-	if (muteTimer && [muteTimer isValid] && [muteTimer timeInterval] == 180) {
+	if (muteTimer != nil && [muteTimer isValid] && [muteTimer timeInterval] == 180) {
 		[muteTimer invalidate];
 		[self muteFor:30];
 		[muteButton setTitle:@"Magic Mute" forState:UIControlStateNormal];
@@ -207,7 +208,7 @@
 				onThread:[NSThread mainThread]
 				withObject:[UIImage imageNamed:@"stopbutton.png"]
 				waitUntilDone:NO];
-			[(AudioStreamer *)object setVolume:1.0];
+			[self unmute];
 		}
 		else
 		{
