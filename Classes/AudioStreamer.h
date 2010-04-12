@@ -17,7 +17,7 @@
 #include <AudioToolbox/AudioToolbox.h>
 
 #define kNumAQBufs 1					// number of audio queue buffers we allocate
-#define kAQBufSize 2 * 48 * 1024		// number of bytes in each audio queue buffer
+#define kAQBufSize 48000		// number of bytes in each audio queue buffer
 // 3x for Live365? 1x for everything else?
 #define kAQMaxPacketDescs 512		// number of packet descriptions in our array
 
