@@ -48,7 +48,7 @@
 											 stringByReplacingOccurrencesOfString:@"<![CDATA[" withString:@""]
 											 stringByReplacingOccurrencesOfString:@"]]>" withString:@""]
 											 stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
-			if (muted) {
+			if (muted && !(artist == nil && album == nil && track == nil)) {
 				[self unmute];
 			}
 		//}

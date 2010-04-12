@@ -1,16 +1,5 @@
 // !$*UTF8*$!
 {
-	0521641A1170B214009B4EE7 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
 	052164331170B88A009B4EE7 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
@@ -21,226 +10,6 @@
 		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
 		rLen = 0;
 		rLoc = 9223372036854775808;
-	};
-	052164341170B88A009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 29";
-		rLen = 0;
-		rLoc = 727;
-		rType = 0;
-		vrLen = 679;
-		vrLoc = 173;
-	};
-	052164351170B88A009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 44";
-		rLen = 0;
-		rLoc = 1679;
-		rType = 0;
-		vrLen = 1279;
-		vrLoc = 548;
-	};
-	052164461170CC6E009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 44";
-		rLen = 0;
-		rLoc = 1679;
-		rType = 0;
-		vrLen = 1278;
-		vrLoc = 548;
-	};
-	0521644A1170CE02009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 29";
-		rLen = 0;
-		rLoc = 663;
-		rType = 0;
-		vrLen = 750;
-		vrLoc = 173;
-	};
-	0521644B1170CE02009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 44";
-		rLen = 0;
-		rLoc = 1679;
-		rType = 0;
-		vrLen = 916;
-		vrLoc = 0;
-	};
-	0521644C1170CE02009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 50";
-		rLen = 0;
-		rLoc = 1992;
-		rType = 0;
-		vrLen = 1118;
-		vrLoc = 1066;
-	};
-	0521644D1170CFAA009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 46";
-		rLen = 0;
-		rLoc = 1973;
-		rType = 0;
-		vrLen = 670;
-		vrLoc = 1635;
-	};
-	0521644E1170CFAA009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 30";
-		rLen = 0;
-		rLoc = 663;
-		rType = 0;
-		vrLen = 757;
-		vrLoc = 201;
-	};
-	0521644F1170CFCA009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 36";
-		rLen = 0;
-		rLoc = 884;
-		rType = 0;
-		vrLen = 802;
-		vrLoc = 201;
-	};
-	052164501170CFF9009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 36";
-		rLen = 0;
-		rLoc = 884;
-		rType = 0;
-		vrLen = 802;
-		vrLoc = 201;
-	};
-	052164511170CFF9009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 75";
-		rLen = 0;
-		rLoc = 3053;
-		rType = 0;
-		vrLen = 815;
-		vrLoc = 1920;
-	};
-	052164531170D0FF009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 18";
-		rLen = 13;
-		rLoc = 407;
-		rType = 0;
-		vrLen = 826;
-		vrLoc = 177;
-	};
-	052164541170D0FF009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 75";
-		rLen = 0;
-		rLoc = 3033;
-		rType = 0;
-		vrLen = 927;
-		vrLoc = 0;
-	};
-	052164551170D0FF009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 62";
-		rLen = 0;
-		rLoc = 2366;
-		rType = 0;
-		vrLen = 1130;
-		vrLoc = 1103;
-	};
-	052164611170D3DD009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 72";
-		rLen = 0;
-		rLoc = 2695;
-		rType = 0;
-		vrLen = 947;
-		vrLoc = 1700;
-	};
-	052164621170D3DD009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 26";
-		rLen = 0;
-		rLoc = 552;
-		rType = 0;
-		vrLen = 825;
-		vrLoc = 177;
-	};
-	052164631170D3DD009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 21";
-		rLen = 0;
-		rLoc = 469;
-		rType = 0;
-		vrLen = 819;
-		vrLoc = 177;
-	};
-	0521649B1170DCD5009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1148";
-		rLen = 10;
-		rLoc = 35472;
-		rType = 0;
-		vrLen = 894;
-		vrLoc = 34603;
-	};
-	0521649C1170DCD5009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 101";
-		rLen = 0;
-		rLoc = 3487;
-		rType = 0;
-		vrLen = 1001;
-		vrLoc = 0;
-	};
-	0521649D1170DCD5009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 38";
-		rLen = 0;
-		rLoc = 955;
-		rType = 0;
-		vrLen = 873;
-		vrLoc = 176;
-	};
-	0521649E1170DCD5009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 88";
-		rLen = 9;
-		rLoc = 3088;
-		rType = 0;
-		vrLen = 801;
-		vrLoc = 2557;
-	};
-	0521649F1170DCD5009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 46";
-		rLen = 0;
-		rLoc = 1973;
-		rType = 0;
-		vrLen = 1416;
-		vrLoc = 1066;
 	};
 	052164CE1170F346009B4EE7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -262,215 +31,35 @@
 		vrLen = 910;
 		vrLoc = 0;
 	};
-	052164D01170F346009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 462";
-		rLen = 0;
-		rLoc = 15481;
-		rType = 0;
-		vrLen = 1285;
-		vrLoc = 13726;
-	};
-	052164D11170F346009B4EE7 /* PBXTextBookmark */ = {
+	0521652211719D00009B4EE7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
 		name = "AudioStreamer.h: 20";
 		rLen = 0;
-		rLoc = 496;
+		rLoc = 490;
 		rType = 0;
-		vrLen = 1247;
-		vrLoc = 2643;
-	};
-	052164D21170F346009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 487;
-		rType = 0;
-		vrLen = 1066;
+		vrLen = 1068;
 		vrLoc = 0;
 	};
-	052164D51170F357009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1065;
-		vrLoc = 3;
-	};
-	052164D81170F4C0009B4EE7 /* PBXTextBookmark */ = {
+	0521652311719D00009B4EE7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
 		name = "AudioStreamer.m: 115";
 		rLen = 0;
 		rLoc = 4346;
 		rType = 0;
-		vrLen = 1761;
-		vrLoc = 2863;
+		vrLen = 1294;
+		vrLoc = 0;
 	};
-	052164D91170F4C0009B4EE7 /* PBXTextBookmark */ = {
+	0521652411719D00009B4EE7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
+		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
+		name = "AudioStreamer.m: 261";
+		rLen = 19;
+		rLoc = 9456;
 		rType = 0;
-		vrLen = 1095;
-		vrLoc = 3;
-	};
-	052164DA1170F4C0009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1054;
-		vrLoc = 23;
-	};
-	052164DD1170F4FD009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1062;
-		vrLoc = 51;
-	};
-	052164E01170F548009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1003;
-		vrLoc = 150;
-	};
-	052164E11170F558009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 487;
-		rType = 0;
-		vrLen = 1003;
-		vrLoc = 150;
-	};
-	052164E41170F584009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 22";
-		rLen = 3;
-		rLoc = 613;
-		rType = 0;
-		vrLen = 954;
-		vrLoc = 223;
-	};
-	052164E91170F5AE009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 22";
-		rLen = 3;
-		rLoc = 613;
-		rType = 0;
-		vrLen = 1011;
-		vrLoc = 224;
-	};
-	052164F11170F5D8009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1043;
-		vrLoc = 275;
-	};
-	052164F41170F5E5009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1090;
-		vrLoc = 305;
-	};
-	052164F71170F5FC009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 487;
-		rType = 0;
-		vrLen = 1124;
-		vrLoc = 333;
-	};
-	052164FA1170F612009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1181;
-		vrLoc = 354;
-	};
-	052164FD1170F626009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 22";
-		rLen = 0;
-		rLoc = 616;
-		rType = 0;
-		vrLen = 1251;
-		vrLoc = 394;
-	};
-	052165001170F687009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 496;
-		rType = 0;
-		vrLen = 1130;
-		vrLoc = 333;
-	};
-	052165031170F694009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 20";
-		rLen = 0;
-		rLoc = 487;
-		rType = 0;
-		vrLen = 1138;
-		vrLoc = 393;
-	};
-	052165061170F6AE009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 19";
-		rLen = 0;
-		rLoc = 414;
-		rType = 0;
-		vrLen = 1240;
-		vrLoc = 394;
-	};
-	0521650B1170F6E2009B4EE7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 19";
-		rLen = 0;
-		rLoc = 414;
-		rType = 0;
-		vrLen = 1021;
-		vrLoc = 153;
+		vrLen = 1004;
+		vrLoc = 8852;
 	};
 	056A6441116FE74200A168B0 /* Virgin TO */ = {
 		isa = PBXExecutable;
@@ -516,179 +105,6 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	056A6467116FF54A00A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 102";
-		rLen = 0;
-		rLoc = 3522;
-		rType = 0;
-		vrLen = 1455;
-		vrLoc = 1361;
-	};
-	056A6468116FF54A00A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 45";
-		rLen = 0;
-		rLoc = 1419;
-		rType = 0;
-		vrLen = 1060;
-		vrLoc = 1282;
-	};
-	056A6469116FF54A00A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1150";
-		rLen = 0;
-		rLoc = 35570;
-		rType = 0;
-		vrLen = 800;
-		vrLoc = 34171;
-	};
-	056A6476116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.h */;
-		name = "iPhoneStreamingPlayerAppDelegate.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 563;
-		vrLoc = 0;
-	};
-	056A6477116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.m */;
-		name = "iPhoneStreamingPlayerAppDelegate.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 646;
-		vrLoc = 42;
-	};
-	056A6478116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 102";
-		rLen = 0;
-		rLoc = 3522;
-		rType = 0;
-		vrLen = 955;
-		vrLoc = 2759;
-	};
-	056A6479116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 44";
-		rLen = 0;
-		rLoc = 1419;
-		rType = 0;
-		vrLen = 1094;
-		vrLoc = 1436;
-	};
-	056A647A116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 24";
-		rLen = 0;
-		rLoc = 546;
-		rType = 0;
-		vrLen = 668;
-		vrLoc = 176;
-	};
-	056A647B116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 17";
-		rLen = 0;
-		rLoc = 422;
-		rType = 0;
-		vrLen = 796;
-		vrLoc = 0;
-	};
-	056A647C116FF8A200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 51";
-		rLen = 0;
-		rLoc = 3506;
-		rType = 0;
-		vrLen = 730;
-		vrLoc = 660;
-	};
-	056A647F116FF8AC00A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1150";
-		rLen = 0;
-		rLoc = 35570;
-		rType = 0;
-		vrLen = 730;
-		vrLoc = 34418;
-	};
-	056A6482116FF8C300A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1150";
-		rLen = 0;
-		rLoc = 35570;
-		rType = 0;
-		vrLen = 730;
-		vrLoc = 34418;
-	};
-	056A6485116FFA7F00A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 51";
-		rLen = 0;
-		rLoc = 3506;
-		rType = 0;
-		vrLen = 731;
-		vrLoc = 662;
-	};
-	056A6486116FFA7F00A168B0 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	056A6487116FFA7F00A168B0 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			UIBackgroundMode,
-		);
-		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
-		rLen = 0;
-		rLoc = 0;
-	};
-	056A6496116FFCC500A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1150";
-		rLen = 0;
-		rLoc = 35570;
-		rType = 0;
-		vrLen = 775;
-		vrLoc = 34489;
-	};
-	056A653811702DFB00A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1150";
-		rLen = 0;
-		rLoc = 35570;
-		rType = 0;
-		vrLen = 737;
-		vrLoc = 34583;
-	};
 	056A655311702E6200A168B0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.m */;
@@ -699,26 +115,6 @@
 		vrLen = 617;
 		vrLoc = 71;
 	};
-	056A655411702E6200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.m */;
-		name = "iPhoneStreamingPlayerViewController.m: 36";
-		rLen = 0;
-		rLoc = 2093;
-		rType = 0;
-		vrLen = 739;
-		vrLoc = 0;
-	};
-	056A655511702E6200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* iPhoneStreamingPlayerViewController.h */;
-		name = "iPhoneStreamingPlayerViewController.h: 24";
-		rLen = 0;
-		rLoc = 546;
-		rType = 0;
-		vrLen = 671;
-		vrLoc = 0;
-	};
 	056A655611702E6200A168B0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623240D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.h */;
@@ -728,60 +124,6 @@
 		rType = 0;
 		vrLen = 563;
 		vrLoc = 0;
-	};
-	056A655711702E6200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */;
-		name = "AudioStreamer.h: 102";
-		rLen = 33;
-		rLoc = 3488;
-		rType = 0;
-		vrLen = 985;
-		vrLoc = 2911;
-	};
-	056A655811702E6200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m: 1134";
-		rLen = 0;
-		rLoc = 35189;
-		rType = 0;
-		vrLen = 821;
-		vrLoc = 33893;
-	};
-	056A655911702E6200A168B0 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			UIBackgroundModes,
-			0,
-		);
-		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	056A655A11702E6200A168B0 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/lsta/Code/audiostreamer-meta/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	056A657011702F8200A168B0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */;
-		name = "AudioStreamer.m.old: 1150";
-		rLen = 0;
-		rLoc = 35570;
-		rType = 0;
-		vrLen = 637;
-		vrLoc = 34771;
 	};
 	1D3623240D0F684500981E51 /* iPhoneStreamingPlayerAppDelegate.h */ = {
 		uiCtxt = {
@@ -876,83 +218,18 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 292605030;
-			PBXWorkspaceStateSaveDate = 292605030;
+			PBXPerProjectTemplateStateSaveDate = 292685592;
+			PBXWorkspaceStateSaveDate = 292685592;
 		};
 		perUserProjectItems = {
-			0521641A1170B214009B4EE7 = 0521641A1170B214009B4EE7 /* PlistBookmark */;
 			052164331170B88A009B4EE7 = 052164331170B88A009B4EE7 /* PlistBookmark */;
-			052164341170B88A009B4EE7 = 052164341170B88A009B4EE7 /* PBXTextBookmark */;
-			052164351170B88A009B4EE7 = 052164351170B88A009B4EE7 /* PBXTextBookmark */;
-			052164461170CC6E009B4EE7 /* PBXTextBookmark */ = 052164461170CC6E009B4EE7 /* PBXTextBookmark */;
-			0521644A1170CE02009B4EE7 /* PBXTextBookmark */ = 0521644A1170CE02009B4EE7 /* PBXTextBookmark */;
-			0521644B1170CE02009B4EE7 /* PBXTextBookmark */ = 0521644B1170CE02009B4EE7 /* PBXTextBookmark */;
-			0521644C1170CE02009B4EE7 /* PBXTextBookmark */ = 0521644C1170CE02009B4EE7 /* PBXTextBookmark */;
-			0521644D1170CFAA009B4EE7 /* PBXTextBookmark */ = 0521644D1170CFAA009B4EE7 /* PBXTextBookmark */;
-			0521644E1170CFAA009B4EE7 /* PBXTextBookmark */ = 0521644E1170CFAA009B4EE7 /* PBXTextBookmark */;
-			0521644F1170CFCA009B4EE7 /* PBXTextBookmark */ = 0521644F1170CFCA009B4EE7 /* PBXTextBookmark */;
-			052164501170CFF9009B4EE7 /* PBXTextBookmark */ = 052164501170CFF9009B4EE7 /* PBXTextBookmark */;
-			052164511170CFF9009B4EE7 /* PBXTextBookmark */ = 052164511170CFF9009B4EE7 /* PBXTextBookmark */;
-			052164531170D0FF009B4EE7 /* PBXTextBookmark */ = 052164531170D0FF009B4EE7 /* PBXTextBookmark */;
-			052164541170D0FF009B4EE7 /* PBXTextBookmark */ = 052164541170D0FF009B4EE7 /* PBXTextBookmark */;
-			052164551170D0FF009B4EE7 /* PBXTextBookmark */ = 052164551170D0FF009B4EE7 /* PBXTextBookmark */;
-			052164611170D3DD009B4EE7 /* PBXTextBookmark */ = 052164611170D3DD009B4EE7 /* PBXTextBookmark */;
-			052164621170D3DD009B4EE7 /* PBXTextBookmark */ = 052164621170D3DD009B4EE7 /* PBXTextBookmark */;
-			052164631170D3DD009B4EE7 /* PBXTextBookmark */ = 052164631170D3DD009B4EE7 /* PBXTextBookmark */;
-			0521649B1170DCD5009B4EE7 /* PBXTextBookmark */ = 0521649B1170DCD5009B4EE7 /* PBXTextBookmark */;
-			0521649C1170DCD5009B4EE7 /* PBXTextBookmark */ = 0521649C1170DCD5009B4EE7 /* PBXTextBookmark */;
-			0521649D1170DCD5009B4EE7 /* PBXTextBookmark */ = 0521649D1170DCD5009B4EE7 /* PBXTextBookmark */;
-			0521649E1170DCD5009B4EE7 /* PBXTextBookmark */ = 0521649E1170DCD5009B4EE7 /* PBXTextBookmark */;
-			0521649F1170DCD5009B4EE7 /* PBXTextBookmark */ = 0521649F1170DCD5009B4EE7 /* PBXTextBookmark */;
-			052164CE1170F346009B4EE7 /* PBXTextBookmark */ = 052164CE1170F346009B4EE7 /* PBXTextBookmark */;
-			052164CF1170F346009B4EE7 /* PBXTextBookmark */ = 052164CF1170F346009B4EE7 /* PBXTextBookmark */;
-			052164D01170F346009B4EE7 /* PBXTextBookmark */ = 052164D01170F346009B4EE7 /* PBXTextBookmark */;
-			052164D11170F346009B4EE7 /* PBXTextBookmark */ = 052164D11170F346009B4EE7 /* PBXTextBookmark */;
-			052164D21170F346009B4EE7 /* PBXTextBookmark */ = 052164D21170F346009B4EE7 /* PBXTextBookmark */;
-			052164D51170F357009B4EE7 /* PBXTextBookmark */ = 052164D51170F357009B4EE7 /* PBXTextBookmark */;
-			052164D81170F4C0009B4EE7 /* PBXTextBookmark */ = 052164D81170F4C0009B4EE7 /* PBXTextBookmark */;
-			052164D91170F4C0009B4EE7 /* PBXTextBookmark */ = 052164D91170F4C0009B4EE7 /* PBXTextBookmark */;
-			052164DA1170F4C0009B4EE7 /* PBXTextBookmark */ = 052164DA1170F4C0009B4EE7 /* PBXTextBookmark */;
-			052164DD1170F4FD009B4EE7 /* PBXTextBookmark */ = 052164DD1170F4FD009B4EE7 /* PBXTextBookmark */;
-			052164E01170F548009B4EE7 /* PBXTextBookmark */ = 052164E01170F548009B4EE7 /* PBXTextBookmark */;
-			052164E11170F558009B4EE7 /* PBXTextBookmark */ = 052164E11170F558009B4EE7 /* PBXTextBookmark */;
-			052164E41170F584009B4EE7 /* PBXTextBookmark */ = 052164E41170F584009B4EE7 /* PBXTextBookmark */;
-			052164E91170F5AE009B4EE7 /* PBXTextBookmark */ = 052164E91170F5AE009B4EE7 /* PBXTextBookmark */;
-			052164F11170F5D8009B4EE7 /* PBXTextBookmark */ = 052164F11170F5D8009B4EE7 /* PBXTextBookmark */;
-			052164F41170F5E5009B4EE7 /* PBXTextBookmark */ = 052164F41170F5E5009B4EE7 /* PBXTextBookmark */;
-			052164F71170F5FC009B4EE7 /* PBXTextBookmark */ = 052164F71170F5FC009B4EE7 /* PBXTextBookmark */;
-			052164FA1170F612009B4EE7 /* PBXTextBookmark */ = 052164FA1170F612009B4EE7 /* PBXTextBookmark */;
-			052164FD1170F626009B4EE7 /* PBXTextBookmark */ = 052164FD1170F626009B4EE7 /* PBXTextBookmark */;
-			052165001170F687009B4EE7 /* PBXTextBookmark */ = 052165001170F687009B4EE7 /* PBXTextBookmark */;
-			052165031170F694009B4EE7 /* PBXTextBookmark */ = 052165031170F694009B4EE7 /* PBXTextBookmark */;
-			052165061170F6AE009B4EE7 /* PBXTextBookmark */ = 052165061170F6AE009B4EE7 /* PBXTextBookmark */;
-			0521650B1170F6E2009B4EE7 /* PBXTextBookmark */ = 0521650B1170F6E2009B4EE7 /* PBXTextBookmark */;
-			056A6467116FF54A00A168B0 = 056A6467116FF54A00A168B0 /* PBXTextBookmark */;
-			056A6468116FF54A00A168B0 = 056A6468116FF54A00A168B0 /* PBXTextBookmark */;
-			056A6469116FF54A00A168B0 = 056A6469116FF54A00A168B0 /* PBXTextBookmark */;
-			056A6476116FF8A200A168B0 = 056A6476116FF8A200A168B0 /* PBXTextBookmark */;
-			056A6477116FF8A200A168B0 = 056A6477116FF8A200A168B0 /* PBXTextBookmark */;
-			056A6478116FF8A200A168B0 = 056A6478116FF8A200A168B0 /* PBXTextBookmark */;
-			056A6479116FF8A200A168B0 = 056A6479116FF8A200A168B0 /* PBXTextBookmark */;
-			056A647A116FF8A200A168B0 = 056A647A116FF8A200A168B0 /* PBXTextBookmark */;
-			056A647B116FF8A200A168B0 = 056A647B116FF8A200A168B0 /* PBXTextBookmark */;
-			056A647C116FF8A200A168B0 = 056A647C116FF8A200A168B0 /* PBXTextBookmark */;
-			056A647F116FF8AC00A168B0 = 056A647F116FF8AC00A168B0 /* PBXTextBookmark */;
-			056A6482116FF8C300A168B0 = 056A6482116FF8C300A168B0 /* PBXTextBookmark */;
-			056A6485116FFA7F00A168B0 = 056A6485116FFA7F00A168B0 /* PBXTextBookmark */;
-			056A6486116FFA7F00A168B0 = 056A6486116FFA7F00A168B0 /* PlistBookmark */;
-			056A6487116FFA7F00A168B0 = 056A6487116FFA7F00A168B0 /* PlistBookmark */;
-			056A6496116FFCC500A168B0 = 056A6496116FFCC500A168B0 /* PBXTextBookmark */;
-			056A653811702DFB00A168B0 = 056A653811702DFB00A168B0 /* PBXTextBookmark */;
+			052164CE1170F346009B4EE7 = 052164CE1170F346009B4EE7 /* PBXTextBookmark */;
+			052164CF1170F346009B4EE7 = 052164CF1170F346009B4EE7 /* PBXTextBookmark */;
+			0521652211719D00009B4EE7 = 0521652211719D00009B4EE7 /* PBXTextBookmark */;
+			0521652311719D00009B4EE7 = 0521652311719D00009B4EE7 /* PBXTextBookmark */;
+			0521652411719D00009B4EE7 = 0521652411719D00009B4EE7 /* PBXTextBookmark */;
 			056A655311702E6200A168B0 = 056A655311702E6200A168B0 /* PBXTextBookmark */;
-			056A655411702E6200A168B0 = 056A655411702E6200A168B0 /* PBXTextBookmark */;
-			056A655511702E6200A168B0 = 056A655511702E6200A168B0 /* PBXTextBookmark */;
 			056A655611702E6200A168B0 = 056A655611702E6200A168B0 /* PBXTextBookmark */;
-			056A655711702E6200A168B0 = 056A655711702E6200A168B0 /* PBXTextBookmark */;
-			056A655811702E6200A168B0 = 056A655811702E6200A168B0 /* PBXTextBookmark */;
-			056A655911702E6200A168B0 = 056A655911702E6200A168B0 /* PlistBookmark */;
-			056A655A11702E6200A168B0 = 056A655A11702E6200A168B0 /* PlistBookmark */;
-			056A657011702F8200A168B0 = 056A657011702F8200A168B0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 056A644D116FE74C00A168B0 /* Source Control */;
 		userBuildSettings = {
@@ -965,17 +242,17 @@
 	};
 	C9C2D8780EB6E09C00A3D071 /* AudioStreamer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1055, 15938}}";
-			sepNavSelRange = "{4346, 0}";
-			sepNavVisRange = "{2863, 1761}";
+			sepNavIntBoundsRect = "{{0, 0}, {1052, 15795}}";
+			sepNavSelRange = "{9456, 19}";
+			sepNavVisRange = "{5777, 1258}";
 			sepNavWindowFrame = "{{84, 23}, {977, 967}}";
 		};
 	};
 	C9C2D8790EB6E09C00A3D071 /* AudioStreamer.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {714, 1690}}";
-			sepNavSelRange = "{415, 0}";
-			sepNavVisRange = "{153, 1021}";
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1690}}";
+			sepNavSelRange = "{414, 0}";
+			sepNavVisRange = "{394, 785}";
 		};
 	};
 }

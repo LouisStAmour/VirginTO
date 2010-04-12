@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AudioStreamer.h</string>
+								<string>AudioStreamer.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AudioStreamer.h</string>
+										<string>AudioStreamer.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>0521650B1170F6E2009B4EE7</string>
+										<string>0521652411719D00009B4EE7</string>
 										<key>history</key>
 										<array>
 											<string>056A655311702E6200A168B0</string>
@@ -337,8 +337,8 @@
 											<string>052164331170B88A009B4EE7</string>
 											<string>052164CE1170F346009B4EE7</string>
 											<string>052164CF1170F346009B4EE7</string>
-											<string>052164D81170F4C0009B4EE7</string>
-											<string>052164D91170F4C0009B4EE7</string>
+											<string>0521652211719D00009B4EE7</string>
+											<string>0521652311719D00009B4EE7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -536,6 +536,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>0521652511719D00009B4EE7</string>
 		<string>0521646C1170D3DD009B4EE7</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>056A644B116FE74C00A168B0</string>
@@ -635,7 +636,7 @@
 			<key>WindowToolGUID</key>
 			<string>056A644B116FE74C00A168B0</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
